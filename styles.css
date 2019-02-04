@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto-Regular', sans-serif;
+}
+
+body {
+    background-color: #E1E5EE;
+}
+
+header {
+    background-color: #2A324B;
+    padding: 20px;
+}
+
+header > h1 {
+    color: #E1E5EE;
+    text-align: center;
+}
+
+.score-board{
+    text-align: center;
+    border: 3px solid #2A324B;
+    width: 200px;
+    margin: 10px auto;
+    font-size: 40px;
+    border-radius: 4px;
+    position: relative;
+    padding: 10px;
+}
+
+
+.badges{
+    background-color: #F7C59F;
+    color: #2A324B;
+    font-size: 15px;
+    padding: 2px;
+    font-weight: bold;
+    border: 2px solid #2A324B;
+}
+
+#user-badge{
+    position: absolute;
+    top: 22px;
+    left: -20px;
+}
+
+#comp-badge{
+    position: absolute;
+    top: 22px;
+    right: -22px;
+}
+
+.result{
+    font-size: 35px;
+}
+
+.result > p{
+    text-align: center;
+    font-weight: bold;
+}
+
+.choices{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.choice{
+    display: inline-block;   
+    margin: 0px 20px;
+    padding: 10px;
+    border: 3px solid #2A324B;
+    border-radius: 50%; 
+    transition: all 0.3s ease;
+}
+
+#action-messege{
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.choice:hover {
+    background-color: #F7C59F;
+    cursor: pointer;
+}
+
