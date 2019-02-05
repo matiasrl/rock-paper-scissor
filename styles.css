@@ -70,7 +70,7 @@ header > h1 {
 
 .choice{
     display: inline-block;   
-    margin: 0px 20px;
+    margin: 0px 30px;
     padding: 10px;
     border: 3px solid #2A324B;
     border-radius: 50%; 
@@ -87,5 +87,20 @@ header > h1 {
 .choice:hover {
     background-color: #F7C59F;
     cursor: pointer;
+}
+
+.green-glow{
+    border: 3px solid #8EB897;
+    box-shadow: 0 0 10px #9DDBAD;
+}
+
+.red-glow{
+    border: 3px solid #E70E02;
+    box-shadow: 0 0 10px #F42B03;
+}
+
+.white-glow{
+    border: 3px solid #B0A3D4;
+    box-shadow: 0 0 10px #CEBACF;
 }
 

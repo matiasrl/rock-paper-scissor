@@ -31,13 +31,19 @@ function win(result, compChoice, userChoice) {
     if (result == "user") {
         userScore++;
         userScore_span.innerHTML = userScore; //cambia el score que se muestra en la pantalla del html (propiedad inner)
-        result_div.innerHTML = convertWord(userChoice) + " beats " + convertWord(compChoice) +  ". You win!";
+        result_div.innerHTML = `${convertWord(userChoice)} beats ${convertWord(compChoice)}. You win! `;
+        document.getElementById(userChoice).classList.add('green-glow'); //Se obtiene un arreglo de las clases con el id seleccionado, para luego agregarle una clase
+        setTimeout(() => document.getElementById(userChoice).classList.remove('green-glow'),350); //se setea un timer que remueve la clase agregada
     }else if (result == "comp") {
         compScore++;
         compScore_span.innerHTML = compScore;
-        result_div.innerHTML = convertWord(compChoice) + " beats " + convertWord(userChoice) +  ". Computer win!";
+        result_div.innerHTML = `${convertWord(compChoice)} beats ${convertWord(userChoice)}. Computer win!`;
+        document.getElementById(userChoice).classList.add('red-glow');
+        setTimeout(() => document.getElementById(userChoice).classList.remove('red-glow'),350);
     }else{
-        result_div.innerHTML = convertWord(compChoice) + " is the same as " + convertWord(userChoice) +  ". Nobody lose!";
+        result_div.innerHTML = `${convertWord(compChoice)} equals ${convertWord(userChoice)}. Nobody lose!"`;
+        document.getElementById(userChoice).classList.add('white-glow');
+        setTimeout(() => document.getElementById(userChoice).classList.remove('white-glow'),350);
     }
 }
 
@@ -83,6 +89,9 @@ function main(){
     paper_div.addEventListener('click', () => whoWins("p"));
 }
 
+/*
+    Convierte la letra generada por la opción elegida a la plabra correspondiente.
+*/
 function convertWord(word){
     if (word == "p") {
         return "Paper";
@@ -93,4 +102,3 @@ function convertWord(word){
     }
 }
 
-//test
